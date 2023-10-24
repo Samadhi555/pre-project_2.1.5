@@ -8,8 +8,11 @@ import org.springframework.stereotype.Component;
 public class Ocean1 {
 
 
-    @Autowired
-    private Island2 island;
+    private final Island2 island;
+
+    public Ocean1(Island2 island) {
+        this.island = island;
+    }
 
     @Override
     public String toString() {
